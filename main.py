@@ -10,7 +10,7 @@ a = [b'\xdd\x05Dc\x00\x00\x02\x00 \x88\x00\x00\x01\x00\x00\x00tf\x0b4tf\x0bAysha
 #print (a[0])
 #b=a[0]
 msg = bytearray()
-b=a[0]
+#b=a[0]
 print (len(a))
 for x in range (len(a)):
     #print(a[x])
@@ -30,7 +30,7 @@ if len(a) > 0:
 			uid = int(binascii.hexlify(uid), 16)
 			print ("uid " + str(uid))
 			# Clean up some messy characters from the user name
-			''''
+			
 			password = password.split(b'\x00', 1)[0]
 			print ("password "+ str(password))
 			password = str(password.strip(b'\x00|\x01\x10x|\x000').decode('utf-8'))
@@ -46,6 +46,6 @@ if len(a) > 0:
 			print ("name **** "+ str(name))
 			users[uid] = (userid, name, int(binascii.hexlify(role), 16), password)
 			userdata = userdata[72:]
-			'''
-		print (*users)
+			
+		print (users)
 		
