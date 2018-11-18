@@ -82,7 +82,7 @@ def zkgetuser(self, zk):
 				userdata = userdata[72:]
 		return users
 	except:
-		return False
+		return False'  
 '''
 command = CMD_CONNECT
 command_string = ''
