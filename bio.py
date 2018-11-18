@@ -104,7 +104,7 @@ except:
 	conn = False
 if conn:
 	zk.enableDevice()
-    user = self.zkgetuser(zk)
+	user = zkgetuser(zk)
 	
 zk.enableDevice()
 zk.disconnect()
