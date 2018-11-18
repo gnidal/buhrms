@@ -13,7 +13,7 @@ from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
 print (zk)
 #conn = self.device_connect(zk)
-''''
+'''
 
 res = zk.connect()
 if res == True:
@@ -118,9 +118,16 @@ if conn:
 	zk.zkclient.sendto(buf, zk.address)
 	try:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
+		
+		command = unpack('HHHH', zk.data_recv[:8])[0]
+		if command == CMD_PREPARE_DATA:
+			size = unpack('I', zk.data_recv[8:12])[0]
+		size = size
+		else:
+		size =  False
 
-		if self.getSizeUser(zk):
-			bytes = self.getSizeUser(zk)
+		if size:
+			bytes = size
 
 			while bytes > 0:
 				data_recv, addr = zk.zkclient.recvfrom(1032)
