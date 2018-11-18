@@ -6,7 +6,7 @@ import binascii
 
 from zklib import zklib, zkconst
 from struct import unpack
-zk = zklib.ZKLib('10.10.10.26', '4370')
+zk = zklib.ZKLib('10.10.10.26', 4370)
 
 res = zk.connect()
 if res == True:
