@@ -4,7 +4,7 @@ from zklib import zklib, zkconst
 zk = zklib.ZKLib('10.10.10.26', '4370')
 
 res = zk.connect()
-if res == True
+if res == True:
 	print zk.enableDevice()
 	print zk.disableDevice()
 	print zk.version()
