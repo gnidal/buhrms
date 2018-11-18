@@ -108,7 +108,7 @@ if conn:
 	print ("getUser")
 	zk.enableDevice()
 	"""Start a connection with the time clock"""
-	command = CMD_USERTEMP_RRQ
+	command = 9
 	command_string = '\x05'
 	chksum = 0
 	session_id = zk.session_id
