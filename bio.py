@@ -24,7 +24,7 @@ if res == True:
 	zk.enableDevice()
 	zk.disconnect()
 '''
-command = CMD_CONNECT
+command = 1000
 command_string = ''
 chksum = 0
 session_id = 0
