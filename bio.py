@@ -3,8 +3,8 @@ import sys
 import datetime
 import logging
 import binascii
-
-from zklib import zklib, zkconst
+import zklib
+from zklib import zkconst
 from struct import unpack
 zk = zklib.ZKLib('10.10.10.26', 4370)
 
