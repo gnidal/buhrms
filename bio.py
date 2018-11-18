@@ -28,7 +28,7 @@ command = 1000
 command_string = ''
 chksum = 0
 session_id = 0
-reply_id = -1 + USHRT_MAX
+reply_id = -1 + 65535
 buf = zk.createHeader(command, chksum, session_id,
 					  reply_id, command_string)
 zk.zkclient.sendto(buf, zk.address)
