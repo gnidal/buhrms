@@ -16,6 +16,6 @@ if res == True:
 	print zk.version()
 	print zk.osversion()
 	print zk.deviceName()
-	print (zk.getUser())
+	print (zk.zkgetuser())
 	zk.enableDevice()
 	zk.disconnect()
