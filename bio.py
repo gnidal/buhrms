@@ -43,3 +43,6 @@ try:
 	print conn
 except:
 	conn = False
+zk.enableDevice()
+zk.disconnect()
+
