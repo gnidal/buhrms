@@ -107,7 +107,7 @@ except:
 if conn:
 	print ("getUser")
 	zk.enableDevice()
-	"""Start a connection with the time clock"""
+	"""Start a connection with the time clfk"""
 	command = 9
 	command_string = '\x05'
 	chksum = 0
