@@ -5,7 +5,7 @@ import logging
 import binascii
 
 import zklib
-import zkconst
+from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib('10.10.10.26', '4370')
 
