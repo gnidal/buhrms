@@ -3,10 +3,11 @@ import sys
 import datetime
 import logging
 import binascii
-import zklib
+from . import zklib
 from zklib import zkconst
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
+zk = zklib.ZKLib(machine_ip, port)
 
 res = zk.connect()
 if res == True:
