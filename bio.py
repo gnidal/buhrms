@@ -25,7 +25,7 @@ if res == True:
 	print (zk.getUser())
 	zk.enableDevice()
 	zk.disconnect()
-'''
+
 
 def getSizeUser(self, zk):
 	"""Checks a returned packet to see if it returned CMD_PREPARE_DATA,
@@ -83,6 +83,7 @@ def zkgetuser(self, zk):
 		return users
 	except:
 		return False
+'''
 command = CMD_CONNECT
 command_string = ''
 chksum = 0
