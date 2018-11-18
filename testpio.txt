@@ -1,4 +1,8 @@
+import sys
+import time
+from zklib import zklib, zkconst
 zk = zklib.ZKLib("010.10.10.26, 4370)
+
 res = zk.connect()
 if res == True
 	print zk.enableDevice()
