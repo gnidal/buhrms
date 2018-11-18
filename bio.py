@@ -8,7 +8,7 @@ from zklib import zklib
 
 import time
 from zklib import zkconst
-from .zkconst import *
+from zkconst import *
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
 print (zk)
