@@ -10,7 +10,8 @@ import time
 from zklib import zkconst
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
-
+#conn = self.device_connect(zk)
+''''
 
 res = zk.connect()
 if res == True:
@@ -42,4 +43,3 @@ try:
 	print conn
 except:
 	conn = False
-'''
