@@ -36,5 +36,6 @@ try:
 		conn = True
 	else:
 		conn = False
+	print conn
 except:
 	conn = False
