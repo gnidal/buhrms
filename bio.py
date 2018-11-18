@@ -84,7 +84,7 @@ def zkgetuser(self, zk):
 	except:
 		return False'  
 '''
-command = CMD_CONNECT
+command = 1000
 command_string = ''
 chksum = 0
 session_id = 0
