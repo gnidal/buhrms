@@ -8,6 +8,7 @@ from zklib import zklib
 
 import time
 from zklib import zkconst
+from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
 #conn = self.device_connect(zk)
