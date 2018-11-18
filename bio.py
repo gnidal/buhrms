@@ -105,6 +105,7 @@ try:
 except:
 	conn = False
 if conn:
+	print ("getUser")
 	zk.enableDevice()
 	"""Start a connection with the time clock"""
 	command = CMD_USERTEMP_RRQ
