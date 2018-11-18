@@ -138,12 +138,14 @@ if conn:
 			data_recv = zk.zkclient.recvfrom(8)
 
 		users = {}
+		userdata = bytearray()
 		if len(zk.userdata) > 0:
             # The first 4 bytes don't seem to be related to the user
             for x in range(len(zk.userdata)):
                 if x > 0:
                     zk.userdata[x] = zk.userdata[x][8:]		
-			userdata = ''.join( zk.userdata )
+			#userdata = ''.join( zk.userdata )
+			userdata = userdata.extend(zk.userdata)
 			userdata = userdata[11:]
 			while len(userdata) > 72:
 				uid, role, password, name, userid = unpack('2s2s8s28sx31s', userdata.ljust(72)[:72])
