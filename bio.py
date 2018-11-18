@@ -120,7 +120,7 @@ if conn:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
 		
 		command = unpack('HHHH', zk.data_recv[:8])[0]
-		if command == CMD_PREPARE_DATA:
+		if command == 1500:
 			size = unpack('I', zk.data_recv[8:12])[0]
 			size = size
 		else:
