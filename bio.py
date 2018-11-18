@@ -122,9 +122,9 @@ if conn:
 		command = unpack('HHHH', zk.data_recv[:8])[0]
 		if command == CMD_PREPARE_DATA:
 			size = unpack('I', zk.data_recv[8:12])[0]
-		size = size
+			size = size
 		else:
-		size =  False
+			size =  False
 
 		if size:
 			bytes = size
