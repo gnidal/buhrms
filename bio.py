@@ -10,7 +10,7 @@ import time
 from zklib import zkconst
 from .zkconst import *
 from struct import unpack
-global zk = zklib.ZKLib("10.10.10.26", 4370)
+zk = zklib.ZKLib("10.10.10.26", 4370)
 print (zk)
 #conn = self.device_connect(zk)
 ''''
@@ -105,7 +105,7 @@ except:
 	conn = False
 if conn:
 	zk.enableDevice()
-	user = zkgetuser(zk)
+	#user = zkgetuser(zk)
 	
 zk.enableDevice()
 zk.disconnect()
