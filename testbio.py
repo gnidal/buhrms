@@ -4,7 +4,7 @@ import datetime
 import logging
 import binascii
 
-from . import zklib
+import zklib
 from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib('10.10.10.26', '4370')
