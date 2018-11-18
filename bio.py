@@ -36,7 +36,7 @@ try:
 	zk.data_recv, addr = zk.zkclient.recvfrom(1024)
 	zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 	command = unpack('HHHH', zk.data_recv[:8])[0]
-	print(command+"")
+	#print(command+"")
 	if command == 2000:
 		conn = True
 	else:
