@@ -129,7 +129,7 @@ if conn:
 
 		if size:
 			bytes = size
-			bytes = 4096
+			#bytes = 4096
 			print ("bytes = "+str(bytes))
 			print ("******")
 			while bytes > 0:
