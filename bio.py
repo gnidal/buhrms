@@ -140,7 +140,7 @@ if conn:
 		users = {}
 		userdata = bytearray()
 		if len(zk.userdata) > 0:
-			# The first 4 bytes don't seem to be related to the user
+			# The first 4 bytes don't seem to be related to the use.r
 			for x in range(len(zk.userdata)):
 				if x > 0:
 					zk.userdata[x] = zk.userdata[x][8:]		
