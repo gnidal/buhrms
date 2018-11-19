@@ -6,7 +6,7 @@ import binascii
 #import sys
 #from zklib import zklib
 #import zklib
-from . import zklib
+from .zklib import *
 from .zkconst import *
 import time
 #from zklib import zkconst
