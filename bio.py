@@ -119,7 +119,7 @@ if conn:
 	try:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
 		#zk.userdata = bytearray()
-		userdata = bytearray()
+		#userdata = bytearray()
 		command = unpack('HHHH', zk.data_recv[:8])[0]
 		if command == 1500:
 			size = unpack('I', zk.data_recv[8:12])[0]
@@ -154,7 +154,9 @@ if conn:
 			# The first 4 bytes don't seem to be related to the use.r.
 			for x in range(len(zk.userdata)):
 				if x > 0:
-					zk.userdata[x] = zk.userdata[x][8:]		
+					zk.userdata[x] = zk.userdata[x][8:]	
+					userdata = userdata.extend(zk.userdata[x])
+					
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
 			#userdata = userdata.extend(zk.userdata)
