@@ -131,7 +131,7 @@ if conn:
 			bytes = size
 			print ("bytes = "+str(bytes))
 			print ("******")
-			while bytes > 0:
+			while 4096 > 0:
 				print ("******")
 				data_recv, addr = zk.zkclient.recvfrom(1032)
 				print (data_recv)
