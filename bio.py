@@ -127,7 +127,7 @@ if conn:
 			size =  False
 		print ("size = "+str(size))
 
-		if size
+		if size:
 			bytes = size
 			print ("bytes = "+str(bytes))
 
