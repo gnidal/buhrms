@@ -127,8 +127,9 @@ if conn:
 			size =  False
 		print ("size = "+str(size))
 
-		if size:
+		if size
 			bytes = size
+			print ("bytes = "+str(bytes))
 
 			while bytes > 0:
 				data_recv, addr = zk.zkclient.recvfrom(1032)
@@ -137,6 +138,8 @@ if conn:
 
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
+			print (len(zk.userdata))
+			print (zk.userdata)
 
 		users = {}
 		userdata = bytearray()
