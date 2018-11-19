@@ -4,13 +4,10 @@ import datetime
 import logging
 import binascii
 #import sys
-#from zklib import zklib
-import zklib
-import zkconst
-#from .zklib import *
-#from .zkconst import *
+from zklib import zklib
+
 import time
-#from zklib import zkconst
+from zklib import zkconst
 #from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
@@ -104,7 +101,7 @@ try:
 		conn = True
 	else:
 		conn = False
-	print (conn)
+	print conn
 except:
 	conn = False
 if conn:
@@ -157,17 +154,12 @@ if conn:
 			# The first 4 bytes don't seem to be related to the use.r.
 			for x in range(len(zk.userdata)):
 				if x > 0:
-					zk.userdata[x] = zk.userdata[x][8:]	
-					#u serdata = userdata.extend(zk.userdata[x])
-					
-			for x in range(len(zk.userdata)):
-				if x > 0:
-					userdata = userdata.zk.userdata[x]
+					zk.userdata[x] = zk.userdata[x][8:]		
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
 			#userdata = userdata.extend(zk.userdata)
-			#userdata = zk.userdata
-			print (userdata)
+			userdata = zk.userdata
+			print (userdata[:2])
 			userdata = userdata[11:]
 			while len(userdata) > 72:
 				uid, role, password, name, userid = unpack('2s2s8s28sx31s', userdata.ljust(72)[:72])
