@@ -160,7 +160,7 @@ if conn:
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
 			#userdata = userdata.extend(zk.userdata)
-			userdata = zk.userdata
+			#userdata = zk.userdata
 			print (userdata[:2])
 			userdata = userdata[11:]
 			while len(userdata) > 72:
