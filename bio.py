@@ -155,11 +155,11 @@ if conn:
 			for x in range(len(zk.userdata)):
 				if x > 0:
 					zk.userdata[x] = zk.userdata[x][8:]	
-					userdata = userdata.extend(zk.userdata[x])
+					#userdata = userdata.extend(zk.userdata[x])
 					
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
-			#userdata = userdata.extend(zk.userdata)
+			userdata = userdata.extend(zk.userdata)
 			#userdata = zk.userdata
 			print (userdata[:2])
 			userdata = userdata[11:]
