@@ -137,7 +137,7 @@ if conn:
 				print ("******")
 				data_recv, addr = zk.zkclient.recvfrom(1032)
 				print (data_recv)
-				#print (addr)
+				print (addr)
 				zk.userdata.append(data_recv)
 				#print ("******")
 				print (zk.userdata)
