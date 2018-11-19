@@ -5,8 +5,8 @@ import logging
 import binascii
 #import sys
 #from zklib import zklib
-import zklib
-#from . import zklib
+#import zklib
+from . import zklib
 from .zkconst import *
 import time
 #from zklib import zkconst
