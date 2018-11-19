@@ -140,7 +140,7 @@ if conn:
 				#print (addr)
 				zk.userdata.append(data_recv)
 				#print ("******")
-				#print (zk.userdata)
+				print (zk.userdata)
 				bytes -= 1024
 
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
