@@ -140,10 +140,10 @@ if conn:
 		users = {}
 		userdata = bytearray()
 		if len(zk.userdata) > 0:
-            # The first 4 bytes don't seem to be related to the user
+			# The first 4 bytes don't seem to be related to the user
 			for x in range(len(zk.userdata)):
-                if x > 0:
-                    zk.userdata[x] = zk.userdata[x][8:]		
+				if x > 0:
+					zk.userdata[x] = zk.userdata[x][8:]		
 			#userdata = ''.join( zk.userdata )
 			userdata = userdata.extend(zk.userdata)
 			userdata = userdata[11:]
@@ -161,7 +161,7 @@ if conn:
 				users[uid] = (userid, name, int(binascii.hexlify(role), 16), password)
 				userdata = userdata[72:]
 		print (users)
-	except:
+		except:
 		print (False)  
 	
 	
