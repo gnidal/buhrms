@@ -118,7 +118,8 @@ if conn:
 	zk.zkclient.sendto(buf, zk.address)
 	try:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
-		zk.userdata = {}
+		zk.userdata = bytearray()
+		userdata = bytearray()
 		command = unpack('HHHH', zk.data_recv[:8])[0]
 		if command == 1500:
 			size = unpack('I', zk.data_recv[8:12])[0]
@@ -145,10 +146,10 @@ if conn:
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
 			print (len(zk.userdata))
-			#print (zk.userdata)#MMMM
+			print (zk.userdata)#MMMM
 
 		users = {}
-		userdata = bytearray()
+		#userdata = bytearray()
 		if len(zk.userdata) > 0:
 			# The first 4 bytes don't seem to be related to the use.r.
 			for x in range(len(zk.userdata)):
