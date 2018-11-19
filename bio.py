@@ -159,7 +159,7 @@ if conn:
 					
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
-			userdata = userdata.extend(zk.userdata)
+			#userdata = userdata.extend(zk.userdata)
 			#userdata = zk.userdata
 			print (zk.userdata)
 			userdata = userdata[11:]
