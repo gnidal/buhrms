@@ -134,6 +134,7 @@ if conn:
 			while bytes > 0:
 				data_recv, addr = zk.zkclient.recvfrom(1032)
 				zk.userdata.append(data_recv)
+				print (zk.userdata)
 				bytes -= 1024
 
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
