@@ -11,7 +11,7 @@ from zklib import zkconst
 #from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
-#print (zk)
+print (zk)
 #conn = self.device_connect(zk)
 '''
 
@@ -118,7 +118,7 @@ if conn:
 	zk.zkclient.sendto(buf, zk.address)
 	try:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
-		#zk.userdata = bytearray()
+		zk.userdata = bytearray()
 		userdata = bytearray()
 		command = unpack('HHHH', zk.data_recv[:8])[0]
 		if command == 1500:
@@ -130,23 +130,23 @@ if conn:
 
 		if size:
 			bytes = size
-			##bytes = 4096
+			#bytes = 4096
 			print ("bytes = "+str(bytes))
 			print ("******")
 			while bytes > 0:
-				#print ("******")
+				print ("******")
 				data_recv, addr = zk.zkclient.recvfrom(1032)
 				#print (data_recv)
 				#print (addr)
 				zk.userdata.append(data_recv)
-				#print ("***zk.userdata***")
-				#print (zk.userdata)
+				#print ("******")
+				print (zk.userdata)
 				bytes -= 1024
-			#print (zk.userdata[:2])	
+
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
 			print (len(zk.userdata))
-			#print (zk.userdata)#MMMM
+			print (zk.userdata)#MMMM
 
 		users = {}
 		#userdata = bytearray()
@@ -156,10 +156,8 @@ if conn:
 				if x > 0:
 					zk.userdata[x] = zk.userdata[x][8:]		
 			#userdata = ''.join( zk.userdata )
-			#print(zk.userdata[0])
-			#userdata = userdata.extend(zk.userdata)
-			userdata = zk.userdata
-			print (userdata[:2])
+			print(zk.userdata)
+			userdata = userdata.extend(zk.userdata)
 			userdata = userdata[11:]
 			while len(userdata) > 72:
 				uid, role, password, name, userid = unpack('2s2s8s28sx31s', userdata.ljust(72)[:72])
