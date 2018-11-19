@@ -158,7 +158,7 @@ if conn:
 			#userdata = ''.join( zk.userdata )
 			#print(zk.userdata[0])
 			#userdata = userdata.extend(zk.userdata)
-			userdata = userdata[0]
+			userdata = zk.userdata
 			userdata = userdata[11:]
 			while len(userdata) > 72:
 				uid, role, password, name, userid = unpack('2s2s8s28sx31s', userdata.ljust(72)[:72])
