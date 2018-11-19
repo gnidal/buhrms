@@ -161,7 +161,7 @@ if conn:
 				users[uid] = (userid, name, int(binascii.hexlify(role), 16), password)
 				userdata = userdata[72:]
 		print (users)
-		except:
+	except:
 		print (False)  
 	
 	
