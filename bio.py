@@ -11,7 +11,7 @@ from zklib import zkconst
 #from .zkconst import *
 from struct import unpack
 zk = zklib.ZKLib("10.10.10.26", 4370)
-print (zk)
+#print (zk)
 #conn = self.device_connect(zk)
 '''
 
@@ -142,7 +142,7 @@ if conn:
 				#print ("***zk.userdata***")
 				#print (zk.userdata)
 				bytes -= 1024
-			print (zk.userdata[:1])	
+			print (zk.userdata[:2])	
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
 			print (len(zk.userdata))
