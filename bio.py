@@ -101,7 +101,7 @@ try:
 		conn = True
 	else:
 		conn = False
-	print conn
+	print (conn)
 except:
 	conn = False
 if conn:
