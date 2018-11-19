@@ -130,19 +130,19 @@ if conn:
 
 		if size:
 			bytes = size
-			#bytes = 4096
+			##bytes = 4096
 			print ("bytes = "+str(bytes))
 			print ("******")
 			while bytes > 0:
 				print ("******")
 				data_recv, addr = zk.zkclient.recvfrom(1032)
-				print (data_recv)
+				#print (data_recv)
 				print (addr)
 				zk.userdata.append(data_recv)
 				print ("***zk.userdata***")
 				#print (zk.userdata)
 				bytes -= 1024
-
+			print (zk.userdata)	
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
 			print (len(zk.userdata))
