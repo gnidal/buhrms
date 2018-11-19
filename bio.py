@@ -118,7 +118,7 @@ if conn:
 	zk.zkclient.sendto(buf, zk.address)
 	try:
 		zk.data_recv, addr = zk.zkclient.recvfrom(1024)
-		zk.userdata = bytearray()
+		#zk.userdata = bytearray()
 		userdata = bytearray()
 		command = unpack('HHHH', zk.data_recv[:8])[0]
 		if command == 1500:
@@ -139,7 +139,7 @@ if conn:
 				print (data_recv)
 				print (addr)
 				zk.userdata.append(data_recv)
-				#print ("******")
+				print ("***zk.userdata***")
 				print (zk.userdata)
 				bytes -= 1024
 
