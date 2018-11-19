@@ -142,7 +142,7 @@ if conn:
 				#print ("***zk.userdata***")
 				#print (zk.userdata)
 				bytes -= 1024
-			print (zk.userdata[:2])	
+			#print (zk.userdata[:2])	
 			zk.session_id = unpack('HHHH', zk.data_recv[:8])[2]
 			data_recv = zk.zkclient.recvfrom(8)
 			print (len(zk.userdata))
@@ -159,6 +159,7 @@ if conn:
 			#print(zk.userdata[0])
 			#userdata = userdata.extend(zk.userdata)
 			userdata = zk.userdata
+			print (userdata[:2])
 			userdata = userdata[11:]
 			while len(userdata) > 72:
 				uid, role, password, name, userid = unpack('2s2s8s28sx31s', userdata.ljust(72)[:72])
